@@ -1,0 +1,54 @@
+[gd_scene load_steps=13 format=3 uid="uid://dalo456gar2so"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_nv7ff"]
+[ext_resource type="PackedScene" uid="uid://bh3rb1hid6d0e" path="res://player.tscn" id="2_rj6y8"]
+[ext_resource type="PackedScene" uid="uid://yu11lhyf3xg3" path="res://coin.tscn" id="2_x3rtb"]
+[ext_resource type="PackedScene" uid="uid://4s1xsq61fyul" path="res://powerup.tscn" id="3_iyq1y"]
+[ext_resource type="PackedScene" uid="uid://duftya1h62823" path="res://cactus.tscn" id="4_0usiu"]
+[ext_resource type="PackedScene" uid="uid://de2fvynexlqvq" path="res://hud.tscn" id="4_dw036"]
+[ext_resource type="PackedScene" uid="uid://cq7321hqu67m6" path="res://bee.tscn" id="5_ivh08"]
+[ext_resource type="Texture2D" uid="uid://bq7q5hmrncx3" path="res://assets/sprites/grass.png" id="6_76qcf"]
+[ext_resource type="AudioStream" uid="uid://b3c4tbjwuypr0" path="res://assets/audio/Coin.wav" id="6_h3f7h"]
+[ext_resource type="AudioStream" uid="uid://dxdi41na83xcl" path="res://assets/audio/Level.wav" id="7_l443d"]
+[ext_resource type="AudioStream" uid="uid://dn6evxpiodd7b" path="res://assets/audio/EndSound.wav" id="8_3c4y1"]
+[ext_resource type="AudioStream" uid="uid://c1r5etuim3t2e" path="res://assets/audio/Powerup.wav" id="9_blfsw"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_nv7ff")
+coin_scene = ExtResource("2_x3rtb")
+powerup_scene = ExtResource("3_iyq1y")
+cactus_scene = ExtResource("4_0usiu")
+bee_scene = ExtResource("5_ivh08")
+offset = 25.0
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 721.0
+offset_bottom = 480.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_76qcf")
+
+[node name="HUD" parent="." instance=ExtResource("4_dw036")]
+
+[node name="Player" parent="." instance=ExtResource("2_rj6y8")]
+
+[node name="GameTimer" type="Timer" parent="."]
+
+[node name="PowerupTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="CoinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_h3f7h")
+
+[node name="LevelSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_l443d")
+
+[node name="EndSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_3c4y1")
+
+[node name="PowerupSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_blfsw")
