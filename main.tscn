@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bh3rb1hid6d0e" path="res://player.tscn" id="2_rj6y8"]
 [ext_resource type="PackedScene" uid="uid://yu11lhyf3xg3" path="res://coin.tscn" id="2_x3rtb"]
 [ext_resource type="PackedScene" uid="uid://4s1xsq61fyul" path="res://powerup.tscn" id="3_iyq1y"]
-[ext_resource type="PackedScene" uid="uid://duftya1h62823" path="res://cactus.tscn" id="4_0usiu"]
+[ext_resource type="PackedScene" uid="uid://duftya1h62823" path="res://fly_trap.tscn" id="4_0usiu"]
 [ext_resource type="PackedScene" uid="uid://de2fvynexlqvq" path="res://hud.tscn" id="4_dw036"]
 [ext_resource type="PackedScene" uid="uid://cq7321hqu67m6" path="res://bee.tscn" id="5_ivh08"]
 [ext_resource type="Texture2D" uid="uid://bq7q5hmrncx3" path="res://assets/sprites/grass.png" id="6_76qcf"]
